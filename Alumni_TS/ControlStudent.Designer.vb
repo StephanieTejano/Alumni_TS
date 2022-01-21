@@ -30,11 +30,14 @@ Partial Class ControlStudent
         Me.Bar4 = New DevExpress.XtraBars.Bar()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
+        Me.ControlAlumni = New Alumni_TS.ControlAlumni()
+        Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.MarkAsGraduateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RenewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RenewMembershipToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.Bar1 = New DevExpress.XtraBars.Bar()
         Me.add_button = New DevExpress.XtraBars.BarButtonItem()
@@ -47,16 +50,14 @@ Partial Class ControlStudent
         Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-        Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
-        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
-        Me.ContextMenuStrip1.SuspendLayout()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Bar3
@@ -97,17 +98,37 @@ Partial Class ControlStudent
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl1.Location = New System.Drawing.Point(0, 59)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(981, 588)
+        Me.PanelControl1.Size = New System.Drawing.Size(955, 581)
         Me.PanelControl1.TabIndex = 0
         '
         'PanelControl2
         '
+        Me.PanelControl2.Controls.Add(Me.ControlAlumni)
         Me.PanelControl2.Controls.Add(Me.GridControl1)
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl2.Location = New System.Drawing.Point(2, 2)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(977, 584)
+        Me.PanelControl2.Size = New System.Drawing.Size(951, 577)
         Me.PanelControl2.TabIndex = 0
+        '
+        'ControlAlumni
+        '
+        Me.ControlAlumni.Location = New System.Drawing.Point(459, 115)
+        Me.ControlAlumni.Name = "ControlAlumni"
+        Me.ControlAlumni.Size = New System.Drawing.Size(8, 8)
+        Me.ControlAlumni.TabIndex = 1
+        '
+        'GridControl1
+        '
+        Me.GridControl1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridControl1.Location = New System.Drawing.Point(2, 2)
+        Me.GridControl1.MainView = Me.GridView1
+        Me.GridControl1.MenuManager = Me.BarManager1
+        Me.GridControl1.Name = "GridControl1"
+        Me.GridControl1.Size = New System.Drawing.Size(947, 573)
+        Me.GridControl1.TabIndex = 0
+        Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'ContextMenuStrip1
         '
@@ -115,7 +136,7 @@ Partial Class ControlStudent
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MarkAsGraduateToolStripMenuItem, Me.RenewToolStripMenuItem, Me.RenewMembershipToolStripMenuItem, Me.NewMemberToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(276, 160)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(276, 132)
         '
         'MarkAsGraduateToolStripMenuItem
         '
@@ -148,6 +169,11 @@ Partial Class ControlStudent
         Me.NewMemberToolStripMenuItem.Size = New System.Drawing.Size(275, 32)
         Me.NewMemberToolStripMenuItem.Text = "New Member"
         '
+        'GridView1
+        '
+        Me.GridView1.GridControl = Me.GridControl1
+        Me.GridView1.Name = "GridView1"
+        '
         'BarManager1
         '
         Me.BarManager1.Bars.AddRange(New DevExpress.XtraBars.Bar() {Me.Bar1, Me.Bar2, Me.Bar7})
@@ -165,7 +191,7 @@ Partial Class ControlStudent
         '
         Me.Bar1.BarName = "Tools"
         Me.Bar1.DockCol = 0
-        Me.Bar1.DockRow = 0
+        Me.Bar1.DockRow = 1
         Me.Bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
         Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.add_button, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.edit_button, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.delete_button, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.print_button, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)})
         Me.Bar1.Text = "Tools"
@@ -210,7 +236,7 @@ Partial Class ControlStudent
         '
         Me.Bar2.BarName = "Main menu"
         Me.Bar2.DockCol = 0
-        Me.Bar2.DockRow = 1
+        Me.Bar2.DockRow = 0
         Me.Bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
         Me.Bar2.OptionsBar.MultiLine = True
         Me.Bar2.OptionsBar.UseWholeRow = True
@@ -236,15 +262,15 @@ Partial Class ControlStudent
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(981, 59)
+        Me.barDockControlTop.Size = New System.Drawing.Size(955, 59)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 647)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 640)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(981, 25)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(955, 25)
         '
         'barDockControlLeft
         '
@@ -252,32 +278,15 @@ Partial Class ControlStudent
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 59)
         Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 588)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 581)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(981, 59)
+        Me.barDockControlRight.Location = New System.Drawing.Point(955, 59)
         Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 588)
-        '
-        'GridControl1
-        '
-        Me.GridControl1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.Location = New System.Drawing.Point(2, 2)
-        Me.GridControl1.MainView = Me.GridView1
-        Me.GridControl1.MenuManager = Me.BarManager1
-        Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(973, 580)
-        Me.GridControl1.TabIndex = 0
-        Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
-        '
-        'GridView1
-        '
-        Me.GridView1.GridControl = Me.GridControl1
-        Me.GridView1.Name = "GridView1"
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 581)
         '
         'ControlStudent
         '
@@ -289,15 +298,15 @@ Partial Class ControlStudent
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
         Me.Name = "ControlStudent"
-        Me.Size = New System.Drawing.Size(981, 672)
+        Me.Size = New System.Drawing.Size(955, 665)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl2.ResumeLayout(False)
-        Me.ContextMenuStrip1.ResumeLayout(False)
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -328,4 +337,5 @@ Partial Class ControlStudent
     Friend WithEvents RenewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RenewMembershipToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewMemberToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ControlAlumni As Alumni_TS.ControlAlumni
 End Class

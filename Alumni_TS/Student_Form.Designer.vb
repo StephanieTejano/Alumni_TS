@@ -22,6 +22,8 @@ Partial Class Student_Form
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Student_Form))
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.Body_PNL = New DevExpress.XtraEditors.PanelControl()
+        Me.PanelControl10 = New DevExpress.XtraEditors.PanelControl()
+        Me.PanelControl7 = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl9 = New DevExpress.XtraEditors.PanelControl()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
@@ -33,6 +35,7 @@ Partial Class Student_Form
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.PanelControl6 = New DevExpress.XtraEditors.PanelControl()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
@@ -92,13 +95,12 @@ Partial Class Student_Form
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.PanelControl7 = New DevExpress.XtraEditors.PanelControl()
-        Me.PanelControl10 = New DevExpress.XtraEditors.PanelControl()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.Body_PNL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Body_PNL.SuspendLayout()
+        CType(Me.PanelControl10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PanelControl7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl9.SuspendLayout()
         CType(Me.PanelControl8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,8 +118,6 @@ Partial Class Student_Form
         Me.PanelControl2.SuspendLayout()
         CType(Me.Footer_PNL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Footer_PNL.SuspendLayout()
-        CType(Me.PanelControl7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PanelControl10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelControl1
@@ -145,8 +145,24 @@ Partial Class Student_Form
         Me.Body_PNL.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Body_PNL.Location = New System.Drawing.Point(2, 2)
         Me.Body_PNL.Name = "Body_PNL"
-        Me.Body_PNL.Size = New System.Drawing.Size(1059, 537)
+        Me.Body_PNL.Size = New System.Drawing.Size(1059, 534)
         Me.Body_PNL.TabIndex = 1
+        '
+        'PanelControl10
+        '
+        Me.PanelControl10.ContentImage = CType(resources.GetObject("PanelControl10.ContentImage"), System.Drawing.Image)
+        Me.PanelControl10.Location = New System.Drawing.Point(5, 5)
+        Me.PanelControl10.Name = "PanelControl10"
+        Me.PanelControl10.Size = New System.Drawing.Size(71, 74)
+        Me.PanelControl10.TabIndex = 39
+        '
+        'PanelControl7
+        '
+        Me.PanelControl7.ContentImage = CType(resources.GetObject("PanelControl7.ContentImage"), System.Drawing.Image)
+        Me.PanelControl7.Location = New System.Drawing.Point(76, 5)
+        Me.PanelControl7.Name = "PanelControl7"
+        Me.PanelControl7.Size = New System.Drawing.Size(71, 74)
+        Me.PanelControl7.TabIndex = 38
         '
         'PanelControl9
         '
@@ -228,7 +244,7 @@ Partial Class Student_Form
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.Location = New System.Drawing.Point(375, 39)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(36, 23)
+        Me.Button4.Size = New System.Drawing.Size(36, 25)
         Me.Button4.TabIndex = 38
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -260,6 +276,18 @@ Partial Class Student_Form
         Me.PanelControl6.Name = "PanelControl6"
         Me.PanelControl6.Size = New System.Drawing.Size(475, 72)
         Me.PanelControl6.TabIndex = 24
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton5.Location = New System.Drawing.Point(333, 40)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(120, 21)
+        Me.RadioButton5.TabIndex = 21
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "Non-Member"
+        Me.RadioButton5.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -358,7 +386,7 @@ Partial Class Student_Form
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"1st Year", "2nd Year", "3rd Year", "4th Year"})
+        Me.ComboBox2.Items.AddRange(New Object() {"1st Year", "2nd Year", "3rd Year", "4th Year", "Graduated"})
         Me.ComboBox2.Location = New System.Drawing.Point(307, 326)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
@@ -537,6 +565,7 @@ Partial Class Student_Form
         '
         'PictureBox1
         '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Location = New System.Drawing.Point(4, 40)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(170, 166)
@@ -830,9 +859,9 @@ Partial Class Student_Form
         Me.Footer_PNL.Controls.Add(Me.Button2)
         Me.Footer_PNL.Controls.Add(Me.Button1)
         Me.Footer_PNL.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Footer_PNL.Location = New System.Drawing.Point(2, 539)
+        Me.Footer_PNL.Location = New System.Drawing.Point(2, 536)
         Me.Footer_PNL.Name = "Footer_PNL"
-        Me.Footer_PNL.Size = New System.Drawing.Size(1059, 46)
+        Me.Footer_PNL.Size = New System.Drawing.Size(1059, 49)
         Me.Footer_PNL.TabIndex = 0
         '
         'Button5
@@ -852,9 +881,9 @@ Partial Class Student_Form
         Me.Button2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(824, 3)
+        Me.Button2.Location = New System.Drawing.Point(840, 3)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 40)
+        Me.Button2.Size = New System.Drawing.Size(96, 40)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "SAVE"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -874,34 +903,6 @@ Partial Class Student_Form
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'RadioButton5
-        '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton5.Location = New System.Drawing.Point(333, 40)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(120, 21)
-        Me.RadioButton5.TabIndex = 21
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.Text = "Non-Member"
-        Me.RadioButton5.UseVisualStyleBackColor = True
-        '
-        'PanelControl7
-        '
-        Me.PanelControl7.ContentImage = CType(resources.GetObject("PanelControl7.ContentImage"), System.Drawing.Image)
-        Me.PanelControl7.Location = New System.Drawing.Point(76, 5)
-        Me.PanelControl7.Name = "PanelControl7"
-        Me.PanelControl7.Size = New System.Drawing.Size(71, 74)
-        Me.PanelControl7.TabIndex = 38
-        '
-        'PanelControl10
-        '
-        Me.PanelControl10.ContentImage = CType(resources.GetObject("PanelControl10.ContentImage"), System.Drawing.Image)
-        Me.PanelControl10.Location = New System.Drawing.Point(5, 5)
-        Me.PanelControl10.Name = "PanelControl10"
-        Me.PanelControl10.Size = New System.Drawing.Size(71, 74)
-        Me.PanelControl10.TabIndex = 39
-        '
         'Student_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -914,6 +915,8 @@ Partial Class Student_Form
         Me.PanelControl1.ResumeLayout(False)
         CType(Me.Body_PNL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Body_PNL.ResumeLayout(False)
+        CType(Me.PanelControl10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PanelControl7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelControl9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl9.ResumeLayout(False)
         CType(Me.PanelControl8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -937,8 +940,6 @@ Partial Class Student_Form
         Me.PanelControl2.PerformLayout()
         CType(Me.Footer_PNL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Footer_PNL.ResumeLayout(False)
-        CType(Me.PanelControl7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PanelControl10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

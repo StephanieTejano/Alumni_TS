@@ -76,6 +76,48 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Academic_Year.Designer.vb">
+      <DependentUpon>Academic_Year.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Academic_Year.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add.Designer.vb">
+      <DependentUpon>Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumni.Designer.vb">
+      <DependentUpon>Alumni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="blank.Designer.vb">
+      <DependentUpon>blank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="blank.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAlumni.Designer.vb">
+      <DependentUpon>ControlAlumni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAlumni.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlMembership.Designer.vb">
+      <DependentUpon>ControlMembership.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlMembership.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlProfessors.Designer.vb">
+      <DependentUpon>ControlProfessors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProfessors.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ControlStudent.Designer.vb">
       <DependentUpon>ControlStudent.vb</DependentUpon>
     </Compile>
@@ -87,6 +129,18 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Add Member.Designer.vb">
+      <DependentUpon>Add Member.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Add Member.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,11 +159,38 @@
     <Compile Include="Student_Form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="Academic_Year.resx">
+      <DependentUpon>Academic_Year.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add.resx">
+      <DependentUpon>Add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumni.resx">
+      <DependentUpon>Alumni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blank.resx">
+      <DependentUpon>blank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAlumni.resx">
+      <DependentUpon>ControlAlumni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlMembership.resx">
+      <DependentUpon>ControlMembership.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlProfessors.resx">
+      <DependentUpon>ControlProfessors.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlStudent.resx">
       <DependentUpon>ControlStudent.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Member.resx">
+      <DependentUpon>Add Member.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">

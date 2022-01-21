@@ -38,4 +38,8 @@
     Private Sub Footer_PNL_Paint(sender As Object, e As PaintEventArgs) Handles Footer_PNL.Paint
 
     End Sub
+
+    Private Sub Label25_Click(sender As Object, e As EventArgs) Handles Label25.Click
+
+    End Sub
 End Class

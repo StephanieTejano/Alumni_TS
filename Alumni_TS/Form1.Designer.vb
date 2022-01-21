@@ -31,13 +31,21 @@
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem4 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
+        Me.AcadYear = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
         Me.ribbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.ribbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup5 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.ControlProfessors1 = New Alumni_TS.ControlProfessors()
+        Me.ControlAlumni1 = New Alumni_TS.ControlAlumni()
         Me.ControlStudent1 = New Alumni_TS.ControlStudent()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.ControlMembership1 = New Alumni_TS.ControlMembership()
+        Me.Blank1 = New Alumni_TS.blank()
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
@@ -46,13 +54,13 @@
         'ribbonControl1
         '
         Me.ribbonControl1.ExpandCollapseItem.Id = 0
-        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5})
+        Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5, Me.AcadYear, Me.BarButtonItem6})
         Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
         Me.ribbonControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ribbonControl1.MaxItemId = 8
+        Me.ribbonControl1.MaxItemId = 11
         Me.ribbonControl1.Name = "ribbonControl1"
         Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.ribbonPage1})
-        Me.ribbonControl1.Size = New System.Drawing.Size(730, 179)
+        Me.ribbonControl1.Size = New System.Drawing.Size(907, 179)
         '
         'BarButtonItem1
         '
@@ -99,9 +107,27 @@
         Me.BarButtonItem5.ItemAppearance.Normal.Options.UseFont = True
         Me.BarButtonItem5.Name = "BarButtonItem5"
         '
+        'AcadYear
+        '
+        Me.AcadYear.Caption = "Academic Year"
+        Me.AcadYear.Id = 9
+        Me.AcadYear.ImageOptions.Image = CType(resources.GetObject("AcadYear.ImageOptions.Image"), System.Drawing.Image)
+        Me.AcadYear.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AcadYear.ItemAppearance.Normal.Options.UseFont = True
+        Me.AcadYear.Name = "AcadYear"
+        '
+        'BarButtonItem6
+        '
+        Me.BarButtonItem6.Caption = "Membership"
+        Me.BarButtonItem6.Id = 10
+        Me.BarButtonItem6.ImageOptions.Image = CType(resources.GetObject("BarButtonItem6.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem6.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BarButtonItem6.ItemAppearance.Normal.Options.UseFont = True
+        Me.BarButtonItem6.Name = "BarButtonItem6"
+        '
         'ribbonPage1
         '
-        Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
+        Me.ribbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.ribbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup3, Me.RibbonPageGroup4, Me.RibbonPageGroup5})
         Me.ribbonPage1.Name = "ribbonPage1"
         Me.ribbonPage1.Text = "Home"
         '
@@ -130,28 +156,71 @@
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.Text = "Professor"
         '
+        'RibbonPageGroup5
+        '
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.AcadYear)
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.BarButtonItem6)
+        Me.RibbonPageGroup5.Name = "RibbonPageGroup5"
+        Me.RibbonPageGroup5.Text = "Membership"
+        '
         'PanelControl1
         '
+        Me.PanelControl1.Controls.Add(Me.Blank1)
+        Me.PanelControl1.Controls.Add(Me.ControlMembership1)
+        Me.PanelControl1.Controls.Add(Me.ControlProfessors1)
+        Me.PanelControl1.Controls.Add(Me.ControlAlumni1)
         Me.PanelControl1.Controls.Add(Me.ControlStudent1)
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl1.Location = New System.Drawing.Point(0, 179)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(730, 417)
+        Me.PanelControl1.Size = New System.Drawing.Size(907, 562)
         Me.PanelControl1.TabIndex = 1
+        '
+        'ControlProfessors1
+        '
+        Me.ControlProfessors1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ControlProfessors1.Location = New System.Drawing.Point(2, 2)
+        Me.ControlProfessors1.Name = "ControlProfessors1"
+        Me.ControlProfessors1.Size = New System.Drawing.Size(903, 558)
+        Me.ControlProfessors1.TabIndex = 2
+        '
+        'ControlAlumni1
+        '
+        Me.ControlAlumni1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ControlAlumni1.Location = New System.Drawing.Point(2, 2)
+        Me.ControlAlumni1.Name = "ControlAlumni1"
+        Me.ControlAlumni1.Size = New System.Drawing.Size(903, 558)
+        Me.ControlAlumni1.TabIndex = 1
         '
         'ControlStudent1
         '
         Me.ControlStudent1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ControlStudent1.Location = New System.Drawing.Point(2, 2)
         Me.ControlStudent1.Name = "ControlStudent1"
-        Me.ControlStudent1.Size = New System.Drawing.Size(726, 413)
+        Me.ControlStudent1.Size = New System.Drawing.Size(903, 558)
         Me.ControlStudent1.TabIndex = 0
+        '
+        'ControlMembership1
+        '
+        Me.ControlMembership1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ControlMembership1.Location = New System.Drawing.Point(2, 2)
+        Me.ControlMembership1.Name = "ControlMembership1"
+        Me.ControlMembership1.Size = New System.Drawing.Size(903, 558)
+        Me.ControlMembership1.TabIndex = 3
+        '
+        'Blank1
+        '
+        Me.Blank1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Blank1.Location = New System.Drawing.Point(2, 2)
+        Me.Blank1.Name = "Blank1"
+        Me.Blank1.Size = New System.Drawing.Size(903, 558)
+        Me.Blank1.TabIndex = 4
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(730, 596)
+        Me.ClientSize = New System.Drawing.Size(907, 741)
         Me.Controls.Add(Me.PanelControl1)
         Me.Controls.Add(Me.ribbonControl1)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -182,5 +251,13 @@
     Friend WithEvents BarButtonItem4 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem5 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents RibbonPageGroup5 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents AcadYear As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem6 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ControlProfessors1 As ControlProfessors
+    Friend WithEvents ControlAlumni1 As ControlAlumni
     Friend WithEvents ControlStudent1 As ControlStudent
+    Friend WithEvents ControlMembership1 As ControlMembership
+    Friend WithEvents Blank1 As blank
 End Class
