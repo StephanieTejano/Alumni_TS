@@ -40,12 +40,12 @@
         Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup5 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.Blank1 = New Alumni_TS.blank()
+        Me.ControlMembership1 = New Alumni_TS.ControlMembership()
         Me.ControlProfessors1 = New Alumni_TS.ControlProfessors()
         Me.ControlAlumni1 = New Alumni_TS.ControlAlumni()
         Me.ControlStudent1 = New Alumni_TS.ControlStudent()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.ControlMembership1 = New Alumni_TS.ControlMembership()
-        Me.Blank1 = New Alumni_TS.blank()
         CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
@@ -176,6 +176,22 @@
         Me.PanelControl1.Size = New System.Drawing.Size(907, 562)
         Me.PanelControl1.TabIndex = 1
         '
+        'Blank1
+        '
+        Me.Blank1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Blank1.Location = New System.Drawing.Point(2, 2)
+        Me.Blank1.Name = "Blank1"
+        Me.Blank1.Size = New System.Drawing.Size(903, 558)
+        Me.Blank1.TabIndex = 4
+        '
+        'ControlMembership1
+        '
+        Me.ControlMembership1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ControlMembership1.Location = New System.Drawing.Point(2, 2)
+        Me.ControlMembership1.Name = "ControlMembership1"
+        Me.ControlMembership1.Size = New System.Drawing.Size(903, 558)
+        Me.ControlMembership1.TabIndex = 3
+        '
         'ControlProfessors1
         '
         Me.ControlProfessors1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -199,22 +215,6 @@
         Me.ControlStudent1.Name = "ControlStudent1"
         Me.ControlStudent1.Size = New System.Drawing.Size(903, 558)
         Me.ControlStudent1.TabIndex = 0
-        '
-        'ControlMembership1
-        '
-        Me.ControlMembership1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ControlMembership1.Location = New System.Drawing.Point(2, 2)
-        Me.ControlMembership1.Name = "ControlMembership1"
-        Me.ControlMembership1.Size = New System.Drawing.Size(903, 558)
-        Me.ControlMembership1.TabIndex = 3
-        '
-        'Blank1
-        '
-        Me.Blank1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Blank1.Location = New System.Drawing.Point(2, 2)
-        Me.Blank1.Name = "Blank1"
-        Me.Blank1.Size = New System.Drawing.Size(903, 558)
-        Me.Blank1.TabIndex = 4
         '
         'Form1
         '

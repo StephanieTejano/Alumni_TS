@@ -28,7 +28,15 @@ Partial Public Class Form1
         ControlStudent1.BringToFront()
     End Sub
 
-    Private Sub BarButtonItem6_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
+    Private Sub BarButtonItem6_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs)
 
+    End Sub
+
+    Private Sub Blank1_Load(sender As Object, e As EventArgs) Handles Blank1.Load
+
+    End Sub
+
+    Private Sub MembershipButton_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
+        ControlMembership1.BringToFront()
     End Sub
 End Class

@@ -183,7 +183,7 @@ Partial Class Membership
         Me.ClientSize = New System.Drawing.Size(518, 178)
         Me.Controls.Add(Me.PanelControl1)
         Me.Name = "Membership"
-        Me.Text = "Add Member"
+        Me.Text = "Add_Member"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()

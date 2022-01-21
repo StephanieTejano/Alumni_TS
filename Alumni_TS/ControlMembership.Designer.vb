@@ -25,17 +25,17 @@ Partial Class ControlMembership
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ControlMembership))
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
-        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.Bar1 = New DevExpress.XtraBars.Bar()
-        Me.Bar2 = New DevExpress.XtraBars.Bar()
-        Me.Bar3 = New DevExpress.XtraBars.Bar()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.Print = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
+        Me.Bar2 = New DevExpress.XtraBars.Bar()
+        Me.Bar3 = New DevExpress.XtraBars.Bar()
+        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -59,69 +59,14 @@ Partial Class ControlMembership
         Me.BarManager1.MaxItemId = 4
         Me.BarManager1.StatusBar = Me.Bar3
         '
-        'barDockControlTop
-        '
-        Me.barDockControlTop.CausesValidation = False
-        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(939, 59)
-        '
-        'barDockControlBottom
-        '
-        Me.barDockControlBottom.CausesValidation = False
-        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 644)
-        Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(939, 25)
-        '
-        'barDockControlLeft
-        '
-        Me.barDockControlLeft.CausesValidation = False
-        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 59)
-        Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 585)
-        '
-        'barDockControlRight
-        '
-        Me.barDockControlRight.CausesValidation = False
-        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(939, 59)
-        Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 585)
-        '
         'Bar1
         '
         Me.Bar1.BarName = "Tools"
         Me.Bar1.DockCol = 0
+        Me.Bar1.DockRow = 1
         Me.Bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
         Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarButtonItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.Print, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarButtonItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)})
         Me.Bar1.Text = "Tools"
-        '
-        'Bar2
-        '
-        Me.Bar2.BarName = "Main menu"
-        Me.Bar2.DockCol = 0
-        Me.Bar2.DockRow = 1
-        Me.Bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
-        Me.Bar2.OptionsBar.MultiLine = True
-        Me.Bar2.OptionsBar.UseWholeRow = True
-        Me.Bar2.Text = "Main menu"
-        Me.Bar2.Visible = False
-        '
-        'Bar3
-        '
-        Me.Bar3.BarName = "Status bar"
-        Me.Bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom
-        Me.Bar3.DockCol = 0
-        Me.Bar3.DockRow = 0
-        Me.Bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
-        Me.Bar3.OptionsBar.AllowQuickCustomization = False
-        Me.Bar3.OptionsBar.DrawDragBorder = False
-        Me.Bar3.OptionsBar.UseWholeRow = True
-        Me.Bar3.Text = "Status bar"
-        Me.Bar3.Visible = False
         '
         'BarButtonItem1
         '
@@ -158,6 +103,62 @@ Partial Class ControlMembership
         Me.BarButtonItem3.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BarButtonItem3.ItemAppearance.Normal.Options.UseFont = True
         Me.BarButtonItem3.Name = "BarButtonItem3"
+        '
+        'Bar2
+        '
+        Me.Bar2.BarName = "Main menu"
+        Me.Bar2.DockCol = 0
+        Me.Bar2.DockRow = 0
+        Me.Bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
+        Me.Bar2.OptionsBar.MultiLine = True
+        Me.Bar2.OptionsBar.UseWholeRow = True
+        Me.Bar2.Text = "Main menu"
+        Me.Bar2.Visible = False
+        '
+        'Bar3
+        '
+        Me.Bar3.BarName = "Status bar"
+        Me.Bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom
+        Me.Bar3.DockCol = 0
+        Me.Bar3.DockRow = 0
+        Me.Bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
+        Me.Bar3.OptionsBar.AllowQuickCustomization = False
+        Me.Bar3.OptionsBar.DrawDragBorder = False
+        Me.Bar3.OptionsBar.UseWholeRow = True
+        Me.Bar3.Text = "Status bar"
+        Me.Bar3.Visible = False
+        '
+        'barDockControlTop
+        '
+        Me.barDockControlTop.CausesValidation = False
+        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
+        Me.barDockControlTop.Size = New System.Drawing.Size(939, 59)
+        '
+        'barDockControlBottom
+        '
+        Me.barDockControlBottom.CausesValidation = False
+        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 644)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(939, 25)
+        '
+        'barDockControlLeft
+        '
+        Me.barDockControlLeft.CausesValidation = False
+        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 59)
+        Me.barDockControlLeft.Manager = Me.BarManager1
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 585)
+        '
+        'barDockControlRight
+        '
+        Me.barDockControlRight.CausesValidation = False
+        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.barDockControlRight.Location = New System.Drawing.Point(939, 59)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 585)
         '
         'PanelControl2
         '

@@ -31,7 +31,6 @@ Partial Class ControlAlumni
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.Bar1 = New DevExpress.XtraBars.Bar()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem4 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
@@ -41,6 +40,7 @@ Partial Class ControlAlumni
         Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl4 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
@@ -125,11 +125,6 @@ Partial Class ControlAlumni
         Me.BarButtonItem1.ItemAppearance.Normal.Options.UseFont = True
         Me.BarButtonItem1.Name = "BarButtonItem1"
         '
-        'BarButtonItem2
-        '
-        Me.BarButtonItem2.Id = 1
-        Me.BarButtonItem2.Name = "BarButtonItem2"
-        '
         'BarButtonItem3
         '
         Me.BarButtonItem3.Caption = "Edit"
@@ -212,6 +207,11 @@ Partial Class ControlAlumni
         Me.barDockControlRight.Location = New System.Drawing.Point(973, 59)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 496)
+        '
+        'BarButtonItem2
+        '
+        Me.BarButtonItem2.Id = 1
+        Me.BarButtonItem2.Name = "BarButtonItem2"
         '
         'PanelControl3
         '
