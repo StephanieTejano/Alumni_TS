@@ -1,5 +1,13 @@
 ﻿Public Class ControlAlumni
-    Private Sub GridControl2_Click(sender As Object, e As EventArgs) Handles GridControl2.Click
+
+    Dim sql As String = ""
+
+    Private Sub ControlAlumni_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Call _openKonneksyon()
+
+        sql = "SELECT * FROM tblAlumni"
+
+        Call _populateGridview(sql, GridControl2, GridView2)
 
     End Sub
 

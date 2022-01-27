@@ -199,6 +199,18 @@
         BQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="BarButtonItem7.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAYpJREFUOE+t
+        kk1LAlEUhmfTL+pXNONHfvQXWrdQx7LMFjVBaosgMJ0xqJUtWmg6Nk6LKCVQKWxRggW6URxHC/zYxG3O
+        dCc/GBqiXnjgcM5938u5XOJfVYzMz4kcGc5xlARADT08NpbAUvv5xFK/XnKhesmNoL5iyRAeG0u5tdso
+        u1Hz0afSUEJyHNnFY2MJLPnWKHvGAUpYjiV7eGwsbQUwQtDkCtnYglk8NrfEuKklxChKNcxKe0SRJd9V
+        Jh5RjJsl+TmIOk9BJHKmtmr4jcQ4JXerYSRXQxAg4fa0LKspu92fvV9cTw8AqK2+pA1m6gqcSc7FqY7u
+        CrbNDOMMCEP6pIZ2km0V72kNObeEvn2D38bH9GVZS1GKecAkJbSX6U0BPUfgcrBycHvujRYkgI4VQsuR
+        4viDOfx8GW6eNWvQ3ANiEpUPvjZEGQXmrNL3RAtBbCcIqy892k11dM2AN3qHsq8jdN1EKvzLCNFHeRnb
+        YYULXaOG6/Dm26wBPWz/CvgJOKwHtv9FBPEJ6515NNoaxuQAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="BackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

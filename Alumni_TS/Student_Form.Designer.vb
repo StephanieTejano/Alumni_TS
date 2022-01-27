@@ -40,27 +40,26 @@ Partial Class Student_Form
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.PanelControl5 = New DevExpress.XtraEditors.PanelControl()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.suffix_tb = New System.Windows.Forms.TextBox()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.birthplace = New System.Windows.Forms.TextBox()
+        Me.middlename = New System.Windows.Forms.TextBox()
+        Me.sex_tb = New System.Windows.Forms.ComboBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.lastname = New System.Windows.Forms.TextBox()
+        Me.firstname = New System.Windows.Forms.TextBox()
+        Me.membershipid = New System.Windows.Forms.TextBox()
+        Me.studid = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -71,25 +70,25 @@ Partial Class Student_Form
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.perprovince = New System.Windows.Forms.TextBox()
+        Me.permunicipality = New System.Windows.Forms.TextBox()
+        Me.perbarangay = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.preprovince = New System.Windows.Forms.TextBox()
+        Me.premunicipality = New System.Windows.Forms.TextBox()
+        Me.prebarangay = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.cpnumber = New System.Windows.Forms.TextBox()
+        Me.email_tb = New System.Windows.Forms.TextBox()
+        Me.fb_tb = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Footer_PNL = New DevExpress.XtraEditors.PanelControl()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -180,11 +179,11 @@ Partial Class Student_Form
         Me.Button6.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(525, 39)
+        Me.Button6.Location = New System.Drawing.Point(468, 39)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(93, 30)
+        Me.Button6.Size = New System.Drawing.Size(150, 30)
         Me.Button6.TabIndex = 41
-        Me.Button6.Text = "Upload"
+        Me.Button6.Text = "Add Certificate"
         Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button6.UseVisualStyleBackColor = True
         '
@@ -192,7 +191,7 @@ Partial Class Student_Form
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(105, 29)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(414, 51)
+        Me.RichTextBox1.Size = New System.Drawing.Size(357, 51)
         Me.RichTextBox1.TabIndex = 40
         Me.RichTextBox1.Text = ""
         '
@@ -292,6 +291,7 @@ Partial Class Student_Form
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Silver
+        Me.Label1.Enabled = False
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(1, 1)
         Me.Label1.Name = "Label1"
@@ -326,27 +326,26 @@ Partial Class Student_Form
         '
         'PanelControl5
         '
+        Me.PanelControl5.Controls.Add(Me.DateTimePicker1)
         Me.PanelControl5.Controls.Add(Me.Label27)
-        Me.PanelControl5.Controls.Add(Me.TextBox18)
+        Me.PanelControl5.Controls.Add(Me.suffix_tb)
         Me.PanelControl5.Controls.Add(Me.TextBox16)
         Me.PanelControl5.Controls.Add(Me.ComboBox2)
-        Me.PanelControl5.Controls.Add(Me.TextBox9)
-        Me.PanelControl5.Controls.Add(Me.TextBox8)
-        Me.PanelControl5.Controls.Add(Me.ComboBox1)
+        Me.PanelControl5.Controls.Add(Me.birthplace)
+        Me.PanelControl5.Controls.Add(Me.middlename)
+        Me.PanelControl5.Controls.Add(Me.sex_tb)
         Me.PanelControl5.Controls.Add(Me.Label25)
         Me.PanelControl5.Controls.Add(Me.Label24)
         Me.PanelControl5.Controls.Add(Me.Label23)
         Me.PanelControl5.Controls.Add(Me.Label22)
-        Me.PanelControl5.Controls.Add(Me.RadioButton4)
-        Me.PanelControl5.Controls.Add(Me.RadioButton3)
         Me.PanelControl5.Controls.Add(Me.Label21)
         Me.PanelControl5.Controls.Add(Me.Label20)
         Me.PanelControl5.Controls.Add(Me.Label19)
         Me.PanelControl5.Controls.Add(Me.Label18)
-        Me.PanelControl5.Controls.Add(Me.TextBox7)
-        Me.PanelControl5.Controls.Add(Me.TextBox6)
-        Me.PanelControl5.Controls.Add(Me.TextBox3)
-        Me.PanelControl5.Controls.Add(Me.TextBox2)
+        Me.PanelControl5.Controls.Add(Me.lastname)
+        Me.PanelControl5.Controls.Add(Me.firstname)
+        Me.PanelControl5.Controls.Add(Me.membershipid)
+        Me.PanelControl5.Controls.Add(Me.studid)
         Me.PanelControl5.Controls.Add(Me.Button3)
         Me.PanelControl5.Controls.Add(Me.PictureBox1)
         Me.PanelControl5.Controls.Add(Me.Label7)
@@ -356,6 +355,13 @@ Partial Class Student_Form
         Me.PanelControl5.Name = "PanelControl5"
         Me.PanelControl5.Size = New System.Drawing.Size(623, 357)
         Me.PanelControl5.TabIndex = 23
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(307, 266)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(136, 23)
+        Me.DateTimePicker1.TabIndex = 38
         '
         'Label27
         '
@@ -367,13 +373,13 @@ Partial Class Student_Form
         Me.Label27.TabIndex = 37
         Me.Label27.Text = "Suffix:"
         '
-        'TextBox18
+        'suffix_tb
         '
-        Me.TextBox18.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.Location = New System.Drawing.Point(307, 205)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox18.TabIndex = 36
+        Me.suffix_tb.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.suffix_tb.Location = New System.Drawing.Point(307, 205)
+        Me.suffix_tb.Name = "suffix_tb"
+        Me.suffix_tb.Size = New System.Drawing.Size(311, 26)
+        Me.suffix_tb.TabIndex = 36
         '
         'TextBox16
         '
@@ -392,29 +398,30 @@ Partial Class Student_Form
         Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox2.TabIndex = 34
         '
-        'TextBox9
+        'birthplace
         '
-        Me.TextBox9.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(307, 294)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox9.TabIndex = 33
+        Me.birthplace.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.birthplace.Location = New System.Drawing.Point(307, 294)
+        Me.birthplace.Name = "birthplace"
+        Me.birthplace.Size = New System.Drawing.Size(311, 26)
+        Me.birthplace.TabIndex = 33
         '
-        'TextBox8
+        'middlename
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(307, 173)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox8.TabIndex = 32
+        Me.middlename.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.middlename.Location = New System.Drawing.Point(307, 173)
+        Me.middlename.Name = "middlename"
+        Me.middlename.Size = New System.Drawing.Size(311, 26)
+        Me.middlename.TabIndex = 32
         '
-        'ComboBox1
+        'sex_tb
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(307, 265)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 31
+        Me.sex_tb.FormattingEnabled = True
+        Me.sex_tb.Items.AddRange(New Object() {"Male", "Female", "LGBTQ"})
+        Me.sex_tb.Location = New System.Drawing.Point(307, 236)
+        Me.sex_tb.Name = "sex_tb"
+        Me.sex_tb.Size = New System.Drawing.Size(311, 24)
+        Me.sex_tb.TabIndex = 31
         '
         'Label25
         '
@@ -454,30 +461,6 @@ Partial Class Student_Form
         Me.Label22.Size = New System.Drawing.Size(77, 18)
         Me.Label22.TabIndex = 27
         Me.Label22.Text = "Birthday:"
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.Location = New System.Drawing.Point(468, 237)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(60, 21)
-        Me.RadioButton4.TabIndex = 26
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Male"
-        Me.RadioButton4.UseVisualStyleBackColor = True
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(351, 238)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(77, 21)
-        Me.RadioButton3.TabIndex = 25
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Female"
-        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'Label21
         '
@@ -519,37 +502,37 @@ Partial Class Student_Form
         Me.Label18.TabIndex = 21
         Me.Label18.Text = "Last Name:"
         '
-        'TextBox7
+        'lastname
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(307, 106)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox7.TabIndex = 20
+        Me.lastname.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lastname.Location = New System.Drawing.Point(307, 106)
+        Me.lastname.Name = "lastname"
+        Me.lastname.Size = New System.Drawing.Size(311, 26)
+        Me.lastname.TabIndex = 20
         '
-        'TextBox6
+        'firstname
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(307, 139)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox6.TabIndex = 19
+        Me.firstname.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.firstname.Location = New System.Drawing.Point(307, 139)
+        Me.firstname.Name = "firstname"
+        Me.firstname.Size = New System.Drawing.Size(311, 26)
+        Me.firstname.TabIndex = 19
         '
-        'TextBox3
+        'membershipid
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(307, 72)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox3.TabIndex = 18
+        Me.membershipid.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.membershipid.Location = New System.Drawing.Point(307, 72)
+        Me.membershipid.Name = "membershipid"
+        Me.membershipid.Size = New System.Drawing.Size(311, 26)
+        Me.membershipid.TabIndex = 18
         '
-        'TextBox2
+        'studid
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(307, 41)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox2.TabIndex = 13
+        Me.studid.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.studid.Location = New System.Drawing.Point(307, 41)
+        Me.studid.Name = "studid"
+        Me.studid.Size = New System.Drawing.Size(311, 26)
+        Me.studid.TabIndex = 13
         '
         'Button3
         '
@@ -609,9 +592,9 @@ Partial Class Student_Form
         Me.PanelControl4.Controls.Add(Me.Label13)
         Me.PanelControl4.Controls.Add(Me.Label14)
         Me.PanelControl4.Controls.Add(Me.Label15)
-        Me.PanelControl4.Controls.Add(Me.TextBox13)
-        Me.PanelControl4.Controls.Add(Me.TextBox14)
-        Me.PanelControl4.Controls.Add(Me.TextBox15)
+        Me.PanelControl4.Controls.Add(Me.perprovince)
+        Me.PanelControl4.Controls.Add(Me.permunicipality)
+        Me.PanelControl4.Controls.Add(Me.perbarangay)
         Me.PanelControl4.Controls.Add(Me.Label16)
         Me.PanelControl4.Location = New System.Drawing.Point(638, 376)
         Me.PanelControl4.Name = "PanelControl4"
@@ -638,7 +621,7 @@ Partial Class Student_Form
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(415, 35)
         Me.Label13.TabIndex = 9
-        Me.Label13.Text = "Prermanent Address"
+        Me.Label13.Text = "Permanent Address"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label14
@@ -661,29 +644,29 @@ Partial Class Student_Form
         Me.Label15.Text = "Municipality:"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox13
+        'perprovince
         '
-        Me.TextBox13.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(117, 41)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox13.TabIndex = 4
+        Me.perprovince.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.perprovince.Location = New System.Drawing.Point(117, 41)
+        Me.perprovince.Name = "perprovince"
+        Me.perprovince.Size = New System.Drawing.Size(293, 26)
+        Me.perprovince.TabIndex = 4
         '
-        'TextBox14
+        'permunicipality
         '
-        Me.TextBox14.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(117, 72)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox14.TabIndex = 0
+        Me.permunicipality.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.permunicipality.Location = New System.Drawing.Point(117, 72)
+        Me.permunicipality.Name = "permunicipality"
+        Me.permunicipality.Size = New System.Drawing.Size(293, 26)
+        Me.permunicipality.TabIndex = 0
         '
-        'TextBox15
+        'perbarangay
         '
-        Me.TextBox15.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.Location = New System.Drawing.Point(117, 104)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox15.TabIndex = 3
+        Me.perbarangay.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.perbarangay.Location = New System.Drawing.Point(117, 104)
+        Me.perbarangay.Name = "perbarangay"
+        Me.perbarangay.Size = New System.Drawing.Size(293, 26)
+        Me.perbarangay.TabIndex = 3
         '
         'Label16
         '
@@ -700,9 +683,9 @@ Partial Class Student_Form
         Me.PanelControl3.Controls.Add(Me.Label9)
         Me.PanelControl3.Controls.Add(Me.Label10)
         Me.PanelControl3.Controls.Add(Me.Label11)
-        Me.PanelControl3.Controls.Add(Me.TextBox10)
-        Me.PanelControl3.Controls.Add(Me.TextBox11)
-        Me.PanelControl3.Controls.Add(Me.TextBox12)
+        Me.PanelControl3.Controls.Add(Me.preprovince)
+        Me.PanelControl3.Controls.Add(Me.premunicipality)
+        Me.PanelControl3.Controls.Add(Me.prebarangay)
         Me.PanelControl3.Controls.Add(Me.Label12)
         Me.PanelControl3.Location = New System.Drawing.Point(638, 231)
         Me.PanelControl3.Name = "PanelControl3"
@@ -740,29 +723,29 @@ Partial Class Student_Form
         Me.Label11.Text = "Municipality:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox10
+        'preprovince
         '
-        Me.TextBox10.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(117, 41)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox10.TabIndex = 4
+        Me.preprovince.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.preprovince.Location = New System.Drawing.Point(117, 41)
+        Me.preprovince.Name = "preprovince"
+        Me.preprovince.Size = New System.Drawing.Size(293, 26)
+        Me.preprovince.TabIndex = 4
         '
-        'TextBox11
+        'premunicipality
         '
-        Me.TextBox11.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(117, 72)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox11.TabIndex = 0
+        Me.premunicipality.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.premunicipality.Location = New System.Drawing.Point(117, 72)
+        Me.premunicipality.Name = "premunicipality"
+        Me.premunicipality.Size = New System.Drawing.Size(293, 26)
+        Me.premunicipality.TabIndex = 0
         '
-        'TextBox12
+        'prebarangay
         '
-        Me.TextBox12.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(117, 104)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(293, 26)
-        Me.TextBox12.TabIndex = 3
+        Me.prebarangay.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prebarangay.Location = New System.Drawing.Point(117, 104)
+        Me.prebarangay.Name = "prebarangay"
+        Me.prebarangay.Size = New System.Drawing.Size(293, 26)
+        Me.prebarangay.TabIndex = 3
         '
         'Label12
         '
@@ -779,9 +762,9 @@ Partial Class Student_Form
         Me.PanelControl2.Controls.Add(Me.Label2)
         Me.PanelControl2.Controls.Add(Me.Label3)
         Me.PanelControl2.Controls.Add(Me.Label4)
-        Me.PanelControl2.Controls.Add(Me.TextBox5)
-        Me.PanelControl2.Controls.Add(Me.TextBox1)
-        Me.PanelControl2.Controls.Add(Me.TextBox4)
+        Me.PanelControl2.Controls.Add(Me.cpnumber)
+        Me.PanelControl2.Controls.Add(Me.email_tb)
+        Me.PanelControl2.Controls.Add(Me.fb_tb)
         Me.PanelControl2.Controls.Add(Me.Label5)
         Me.PanelControl2.Location = New System.Drawing.Point(638, 85)
         Me.PanelControl2.Name = "PanelControl2"
@@ -819,29 +802,29 @@ Partial Class Student_Form
         Me.Label4.Text = "Email:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox5
+        'cpnumber
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(99, 41)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox5.TabIndex = 4
+        Me.cpnumber.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cpnumber.Location = New System.Drawing.Point(99, 41)
+        Me.cpnumber.Name = "cpnumber"
+        Me.cpnumber.Size = New System.Drawing.Size(311, 26)
+        Me.cpnumber.TabIndex = 4
         '
-        'TextBox1
+        'email_tb
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(100, 73)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(310, 26)
-        Me.TextBox1.TabIndex = 0
+        Me.email_tb.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.email_tb.Location = New System.Drawing.Point(100, 73)
+        Me.email_tb.Name = "email_tb"
+        Me.email_tb.Size = New System.Drawing.Size(310, 26)
+        Me.email_tb.TabIndex = 0
         '
-        'TextBox4
+        'fb_tb
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(100, 104)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(310, 26)
-        Me.TextBox4.TabIndex = 3
+        Me.fb_tb.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fb_tb.Location = New System.Drawing.Point(100, 104)
+        Me.fb_tb.Name = "fb_tb"
+        Me.fb_tb.Size = New System.Drawing.Size(310, 26)
+        Me.fb_tb.TabIndex = 3
         '
         'Label5
         '
@@ -881,7 +864,7 @@ Partial Class Student_Form
         Me.Button2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(840, 3)
+        Me.Button2.Location = New System.Drawing.Point(840, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(96, 40)
         Me.Button2.TabIndex = 1
@@ -895,7 +878,7 @@ Partial Class Student_Form
         Me.Button1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(943, 3)
+        Me.Button1.Location = New System.Drawing.Point(943, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 40)
         Me.Button1.TabIndex = 0
@@ -956,25 +939,23 @@ Partial Class Student_Form
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents cpnumber As TextBox
+    Friend WithEvents fb_tb As TextBox
+    Friend WithEvents email_tb As TextBox
     Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents PanelControl6 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents Label1 As Label
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents PanelControl5 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents RadioButton4 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents Label21 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents lastname As TextBox
+    Friend WithEvents firstname As TextBox
+    Friend WithEvents membershipid As TextBox
+    Friend WithEvents studid As TextBox
     Friend WithEvents Button3 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PanelControl4 As DevExpress.XtraEditors.PanelControl
@@ -982,22 +963,22 @@ Partial Class Student_Form
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents perprovince As TextBox
+    Friend WithEvents permunicipality As TextBox
+    Friend WithEvents perbarangay As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents PanelControl3 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents preprovince As TextBox
+    Friend WithEvents premunicipality As TextBox
+    Friend WithEvents prebarangay As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents birthplace As TextBox
+    Friend WithEvents middlename As TextBox
+    Friend WithEvents sex_tb As ComboBox
     Friend WithEvents Label25 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
@@ -1008,7 +989,7 @@ Partial Class Student_Form
     Friend WithEvents Label26 As Label
     Friend WithEvents TextBox17 As TextBox
     Friend WithEvents Label27 As Label
-    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents suffix_tb As TextBox
     Friend WithEvents TextBox16 As TextBox
     Friend WithEvents PanelControl9 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents Label29 As Label
@@ -1019,4 +1000,5 @@ Partial Class Student_Form
     Friend WithEvents PanelControl10 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents PanelControl7 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

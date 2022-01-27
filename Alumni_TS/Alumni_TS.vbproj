@@ -88,6 +88,12 @@
     <Compile Include="Add.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddUser.Designer.vb">
+      <DependentUpon>AddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Alumni.Designer.vb">
       <DependentUpon>Alumni.vb</DependentUpon>
     </Compile>
@@ -97,13 +103,17 @@
     <Compile Include="blank.Designer.vb">
       <DependentUpon>blank.vb</DependentUpon>
     </Compile>
-    <Compile Include="blank.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="blank.vb" />
     <Compile Include="ControlAlumni.Designer.vb">
       <DependentUpon>ControlAlumni.vb</DependentUpon>
     </Compile>
     <Compile Include="ControlAlumni.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlGuardian.Designer.vb">
+      <DependentUpon>ControlGuardian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ControlGuardian.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlMembership.Designer.vb">
@@ -133,7 +143,11 @@
     <Compile Include="Add_Member.Designer.vb">
       <DependentUpon>Add_Member.vb</DependentUpon>
     </Compile>
-    <Compile Include="Add_Member.vb">
+    <Compile Include="Add_Member.vb" />
+    <Compile Include="Guardian_Form.Designer.vb">
+      <DependentUpon>Guardian_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Guardian_Form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm1.Designer.vb">
@@ -142,6 +156,7 @@
     <Compile Include="LoginForm1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -165,6 +180,9 @@
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alumni.resx">
       <DependentUpon>Alumni.vb</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlAlumni.resx">
       <DependentUpon>ControlAlumni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlGuardian.resx">
+      <DependentUpon>ControlGuardian.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlMembership.resx">
       <DependentUpon>ControlMembership.vb</DependentUpon>
@@ -188,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add_Member.resx">
       <DependentUpon>Add_Member.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guardian_Form.resx">
+      <DependentUpon>Guardian_Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>

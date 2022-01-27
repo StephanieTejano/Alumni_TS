@@ -27,15 +27,13 @@ Partial Class Alumni
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.compname = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.job_tb = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.acadyear = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.studid = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Footer_PNL, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,7 +56,7 @@ Partial Class Alumni
         Me.Footer_PNL.Controls.Add(Me.Button2)
         Me.Footer_PNL.Controls.Add(Me.Button1)
         Me.Footer_PNL.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Footer_PNL.Location = New System.Drawing.Point(2, 255)
+        Me.Footer_PNL.Location = New System.Drawing.Point(2, 204)
         Me.Footer_PNL.Name = "Footer_PNL"
         Me.Footer_PNL.Size = New System.Drawing.Size(560, 47)
         Me.Footer_PNL.TabIndex = 1
@@ -97,26 +95,24 @@ Partial Class Alumni
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl2.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(564, 304)
+        Me.PanelControl2.Size = New System.Drawing.Size(564, 253)
         Me.PanelControl2.TabIndex = 1
         '
         'PanelControl3
         '
         Me.PanelControl3.Controls.Add(Me.TextBox6)
-        Me.PanelControl3.Controls.Add(Me.TextBox5)
-        Me.PanelControl3.Controls.Add(Me.Label4)
-        Me.PanelControl3.Controls.Add(Me.TextBox4)
+        Me.PanelControl3.Controls.Add(Me.compname)
         Me.PanelControl3.Controls.Add(Me.Label3)
-        Me.PanelControl3.Controls.Add(Me.TextBox3)
+        Me.PanelControl3.Controls.Add(Me.job_tb)
         Me.PanelControl3.Controls.Add(Me.Label2)
-        Me.PanelControl3.Controls.Add(Me.TextBox1)
+        Me.PanelControl3.Controls.Add(Me.acadyear)
         Me.PanelControl3.Controls.Add(Me.Label1)
-        Me.PanelControl3.Controls.Add(Me.TextBox2)
+        Me.PanelControl3.Controls.Add(Me.studid)
         Me.PanelControl3.Controls.Add(Me.Label7)
         Me.PanelControl3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl3.Location = New System.Drawing.Point(2, 2)
         Me.PanelControl3.Name = "PanelControl3"
-        Me.PanelControl3.Size = New System.Drawing.Size(560, 253)
+        Me.PanelControl3.Size = New System.Drawing.Size(560, 202)
         Me.PanelControl3.TabIndex = 2
         '
         'TextBox6
@@ -130,31 +126,13 @@ Partial Class Alumni
         Me.TextBox6.Text = "Alum Information"
         Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox5
+        'compname
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(240, 210)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox5.TabIndex = 23
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(64, 213)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(145, 18)
-        Me.Label4.TabIndex = 24
-        Me.Label4.Text = "Company Address:"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(241, 166)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox4.TabIndex = 21
+        Me.compname.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.compname.Location = New System.Drawing.Point(241, 166)
+        Me.compname.Name = "compname"
+        Me.compname.Size = New System.Drawing.Size(311, 26)
+        Me.compname.TabIndex = 21
         '
         'Label3
         '
@@ -166,13 +144,13 @@ Partial Class Alumni
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Company Name:"
         '
-        'TextBox3
+        'job_tb
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(240, 126)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox3.TabIndex = 19
+        Me.job_tb.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.job_tb.Location = New System.Drawing.Point(240, 126)
+        Me.job_tb.Name = "job_tb"
+        Me.job_tb.Size = New System.Drawing.Size(311, 26)
+        Me.job_tb.TabIndex = 19
         '
         'Label2
         '
@@ -184,13 +162,13 @@ Partial Class Alumni
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Job:"
         '
-        'TextBox1
+        'acadyear
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(240, 90)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox1.TabIndex = 17
+        Me.acadyear.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.acadyear.Location = New System.Drawing.Point(240, 90)
+        Me.acadyear.Name = "acadyear"
+        Me.acadyear.Size = New System.Drawing.Size(311, 26)
+        Me.acadyear.TabIndex = 17
         '
         'Label1
         '
@@ -202,13 +180,13 @@ Partial Class Alumni
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Academic Year Graduated:"
         '
-        'TextBox2
+        'studid
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(240, 55)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox2.TabIndex = 15
+        Me.studid.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.studid.Location = New System.Drawing.Point(240, 55)
+        Me.studid.Name = "studid"
+        Me.studid.Size = New System.Drawing.Size(311, 26)
+        Me.studid.TabIndex = 15
         '
         'Label7
         '
@@ -224,7 +202,7 @@ Partial Class Alumni
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(564, 304)
+        Me.ClientSize = New System.Drawing.Size(564, 253)
         Me.Controls.Add(Me.PanelControl2)
         Me.Controls.Add(Me.PanelControl1)
         Me.Name = "Alumni"
@@ -248,14 +226,12 @@ Partial Class Alumni
     Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents PanelControl3 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents compname As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents job_tb As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents acadyear As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents studid As TextBox
     Friend WithEvents Label7 As Label
 End Class

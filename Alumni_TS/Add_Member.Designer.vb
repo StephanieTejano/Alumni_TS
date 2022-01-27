@@ -25,13 +25,13 @@ Partial Class Membership
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.mem_type = New System.Windows.Forms.ComboBox()
+        Me.acadyear = New System.Windows.Forms.ComboBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.name_tb = New System.Windows.Forms.TextBox()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,51 +89,46 @@ Partial Class Membership
         '
         'PanelControl2
         '
-        Me.PanelControl2.Controls.Add(Me.RadioButton2)
-        Me.PanelControl2.Controls.Add(Me.RadioButton1)
-        Me.PanelControl2.Controls.Add(Me.ComboBox1)
+        Me.PanelControl2.Controls.Add(Me.Label2)
+        Me.PanelControl2.Controls.Add(Me.mem_type)
+        Me.PanelControl2.Controls.Add(Me.acadyear)
         Me.PanelControl2.Controls.Add(Me.Button4)
         Me.PanelControl2.Controls.Add(Me.Label1)
         Me.PanelControl2.Controls.Add(Me.Label26)
-        Me.PanelControl2.Controls.Add(Me.TextBox17)
+        Me.PanelControl2.Controls.Add(Me.name_tb)
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl2.Location = New System.Drawing.Point(2, 2)
         Me.PanelControl2.Name = "PanelControl2"
         Me.PanelControl2.Size = New System.Drawing.Size(514, 174)
         Me.PanelControl2.TabIndex = 42
         '
-        'RadioButton2
+        'Label2
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(313, 105)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(120, 21)
-        Me.RadioButton2.TabIndex = 43
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "New Member"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(2, 84)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(144, 18)
+        Me.Label2.TabIndex = 45
+        Me.Label2.Text = "Membership Type:"
         '
-        'RadioButton1
+        'mem_type
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(313, 83)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(136, 21)
-        Me.RadioButton1.TabIndex = 42
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Renew Member"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.mem_type.FormattingEnabled = True
+        Me.mem_type.Items.AddRange(New Object() {"New Member", "Renew Member"})
+        Me.mem_type.Location = New System.Drawing.Point(152, 83)
+        Me.mem_type.Name = "mem_type"
+        Me.mem_type.Size = New System.Drawing.Size(297, 24)
+        Me.mem_type.TabIndex = 44
         '
-        'ComboBox1
+        'acadyear
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"2018-2019", "2019-2020", "2020-2021", "2021-2022"})
-        Me.ComboBox1.Location = New System.Drawing.Point(138, 21)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(311, 24)
-        Me.ComboBox1.TabIndex = 32
+        Me.acadyear.FormattingEnabled = True
+        Me.acadyear.Items.AddRange(New Object() {"2018-2019", "2019-2020", "2020-2021", "2021-2022"})
+        Me.acadyear.Location = New System.Drawing.Point(152, 21)
+        Me.acadyear.Name = "acadyear"
+        Me.acadyear.Size = New System.Drawing.Size(297, 24)
+        Me.acadyear.TabIndex = 32
         '
         'Button4
         '
@@ -152,7 +147,7 @@ Partial Class Membership
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(8, 22)
+        Me.Label1.Location = New System.Drawing.Point(22, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(124, 18)
         Me.Label1.TabIndex = 20
@@ -162,19 +157,19 @@ Partial Class Membership
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(78, 55)
+        Me.Label26.Location = New System.Drawing.Point(90, 55)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(56, 18)
         Me.Label26.TabIndex = 39
         Me.Label26.Text = "Name:"
         '
-        'TextBox17
+        'name_tb
         '
-        Me.TextBox17.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(138, 51)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(311, 26)
-        Me.TextBox17.TabIndex = 40
+        Me.name_tb.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.name_tb.Location = New System.Drawing.Point(152, 51)
+        Me.name_tb.Name = "name_tb"
+        Me.name_tb.Size = New System.Drawing.Size(297, 26)
+        Me.name_tb.TabIndex = 40
         '
         'Membership
         '
@@ -182,7 +177,7 @@ Partial Class Membership
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(518, 178)
         Me.Controls.Add(Me.PanelControl1)
-        Me.Name = "Membership"
+        Me.name = "Membership"
         Me.Text = "Add_Member"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
@@ -197,14 +192,14 @@ Partial Class Membership
 
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents acadyear As ComboBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Label26 As Label
-    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents name_tb As TextBox
     Friend WithEvents PanelControl3 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents PanelControl2 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Label2 As Label
+    Friend WithEvents mem_type As ComboBox
 End Class
