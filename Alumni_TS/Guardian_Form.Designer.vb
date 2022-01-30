@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Guardian_Form
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,12 +17,17 @@ Partial Class Guardian_Form
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Guardian_Form))
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
-        Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl3 = New DevExpress.XtraEditors.PanelControl()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.fb_acc = New System.Windows.Forms.TextBox()
+        Me.cp_no = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.add = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.suffix_tb = New System.Windows.Forms.TextBox()
         Me.middlename = New System.Windows.Forms.TextBox()
@@ -31,20 +36,15 @@ Partial Class Guardian_Form
         Me.Label18 = New System.Windows.Forms.Label()
         Me.lastname = New System.Windows.Forms.TextBox()
         Me.firstname = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.add = New System.Windows.Forms.TextBox()
-        Me.cp_no = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.fb_acc = New System.Windows.Forms.TextBox()
+        Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl2.SuspendLayout()
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl3.SuspendLayout()
+        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl2.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelControl1
@@ -56,16 +56,6 @@ Partial Class Guardian_Form
         Me.PanelControl1.Name = "PanelControl1"
         Me.PanelControl1.Size = New System.Drawing.Size(504, 316)
         Me.PanelControl1.TabIndex = 0
-        '
-        'PanelControl2
-        '
-        Me.PanelControl2.Controls.Add(Me.Button2)
-        Me.PanelControl2.Controls.Add(Me.Button1)
-        Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelControl2.Location = New System.Drawing.Point(2, 266)
-        Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(500, 48)
-        Me.PanelControl2.TabIndex = 0
         '
         'PanelControl3
         '
@@ -88,6 +78,60 @@ Partial Class Guardian_Form
         Me.PanelControl3.Name = "PanelControl3"
         Me.PanelControl3.Size = New System.Drawing.Size(500, 264)
         Me.PanelControl3.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(77, 228)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(95, 18)
+        Me.Label4.TabIndex = 51
+        Me.Label4.Text = "FB Account:"
+        '
+        'fb_acc
+        '
+        Me.fb_acc.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fb_acc.Location = New System.Drawing.Point(178, 225)
+        Me.fb_acc.Name = "fb_acc"
+        Me.fb_acc.Size = New System.Drawing.Size(311, 26)
+        Me.fb_acc.TabIndex = 50
+        '
+        'cp_no
+        '
+        Me.cp_no.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cp_no.Location = New System.Drawing.Point(178, 189)
+        Me.cp_no.Name = "cp_no"
+        Me.cp_no.Size = New System.Drawing.Size(311, 26)
+        Me.cp_no.TabIndex = 49
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(39, 192)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(133, 18)
+        Me.Label2.TabIndex = 48
+        Me.Label2.Text = "Contact Number:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(99, 157)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(73, 18)
+        Me.Label1.TabIndex = 47
+        Me.Label1.Text = "Address:"
+        '
+        'add
+        '
+        Me.add.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.add.Location = New System.Drawing.Point(178, 154)
+        Me.add.Name = "add"
+        Me.add.Size = New System.Drawing.Size(311, 26)
+        Me.add.TabIndex = 46
         '
         'Label27
         '
@@ -161,59 +205,15 @@ Partial Class Guardian_Form
         Me.firstname.Size = New System.Drawing.Size(311, 26)
         Me.firstname.TabIndex = 38
         '
-        'Label1
+        'PanelControl2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(99, 157)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 18)
-        Me.Label1.TabIndex = 47
-        Me.Label1.Text = "Address:"
-        '
-        'add
-        '
-        Me.add.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add.Location = New System.Drawing.Point(178, 154)
-        Me.add.Name = "add"
-        Me.add.Size = New System.Drawing.Size(311, 26)
-        Me.add.TabIndex = 46
-        '
-        'cp_no
-        '
-        Me.cp_no.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cp_no.Location = New System.Drawing.Point(178, 189)
-        Me.cp_no.Name = "cp_no"
-        Me.cp_no.Size = New System.Drawing.Size(311, 26)
-        Me.cp_no.TabIndex = 49
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(39, 192)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 18)
-        Me.Label2.TabIndex = 48
-        Me.Label2.Text = "Contact Number:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(77, 228)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 18)
-        Me.Label4.TabIndex = 51
-        Me.Label4.Text = "FB Account:"
-        '
-        'fb_acc
-        '
-        Me.fb_acc.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fb_acc.Location = New System.Drawing.Point(178, 225)
-        Me.fb_acc.Name = "fb_acc"
-        Me.fb_acc.Size = New System.Drawing.Size(311, 26)
-        Me.fb_acc.TabIndex = 50
+        Me.PanelControl2.Controls.Add(Me.Button2)
+        Me.PanelControl2.Controls.Add(Me.Button1)
+        Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PanelControl2.Location = New System.Drawing.Point(2, 266)
+        Me.PanelControl2.Name = "PanelControl2"
+        Me.PanelControl2.Size = New System.Drawing.Size(500, 48)
+        Me.PanelControl2.TabIndex = 0
         '
         'Button2
         '
@@ -248,15 +248,18 @@ Partial Class Guardian_Form
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(504, 316)
         Me.Controls.Add(Me.PanelControl1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Guardian_Form"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Guardian_Form"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
-        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl2.ResumeLayout(False)
         CType(Me.PanelControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl3.ResumeLayout(False)
         Me.PanelControl3.PerformLayout()
+        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

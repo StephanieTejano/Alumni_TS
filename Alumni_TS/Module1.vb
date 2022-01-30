@@ -1,15 +1,16 @@
 ﻿Imports System.Data.SqlClient
 
 Module Module1
+    Public cmd As New SqlCommand
     Public da As New SqlDataAdapter
     Public dset As New DataSet
 
-    ReadOnly Dim str As String
+    ReadOnly str As String
 
-    ReadOnly Dim server As String = "LAPTOP-REBBTM8U\MSSQLSERVER01"
-    ReadOnly Dim username As String = "user"
-    ReadOnly Dim password As String = "SKYLER18282020"
-    ReadOnly Dim database As String = "dbALUMNITRACKING"
+    ReadOnly server As String = "LAPTOP-REBBTM8U\MSSQLSERVER01"
+    ReadOnly username As String = "user"
+    ReadOnly password As String = "SKYLER18282020"
+    ReadOnly database As String = "dbALUMNITRACKING"
 
 
     Public konStr As String = "Data Source='" & server & "';User='" & username & "';password='" & password & "'; Initial Catalog='" & database & "';"
@@ -68,5 +69,13 @@ Module Module1
         End Try
     End Sub
 
-
+    Sub _populate(ByVal sql As String)
+        Try
+            cmd = New SqlCommand(sql, kon)
+            dset = New DataSet
+            dset.Load(cmd.ExecuteReader, LoadOption.OverwriteChanges, sql)
+        Catch ex As Exception
+            MsgBox("populate" & vbCrLf & ex.Message)
+        End Try
+    End Sub
 End Module

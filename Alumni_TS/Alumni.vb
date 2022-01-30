@@ -30,6 +30,11 @@ VALUES('" & stud_ID & "'
             ,'" & comp_name & "'
             ,GETDATE())"
 
-        Call _save(sql)
+        Dim result As DialogResult = MessageBox.Show("Click ok to continue.", "Add Student", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        If result = DialogResult.OK Then
+            Call _save(sql)
+        Else
+
+        End If
     End Sub
 End Class

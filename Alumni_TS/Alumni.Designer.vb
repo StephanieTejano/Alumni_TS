@@ -205,7 +205,10 @@ Partial Class Alumni
         Me.ClientSize = New System.Drawing.Size(564, 253)
         Me.Controls.Add(Me.PanelControl2)
         Me.Controls.Add(Me.PanelControl1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Alumni"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Alumni"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Footer_PNL, System.ComponentModel.ISupportInitialize).EndInit()

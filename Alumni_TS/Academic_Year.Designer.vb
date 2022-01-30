@@ -158,7 +158,10 @@ Partial Class Academic_Year
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(628, 582)
         Me.Controls.Add(Me.PanelControl1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Academic_Year"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Academic_Year"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)

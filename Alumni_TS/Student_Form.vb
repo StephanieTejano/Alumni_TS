@@ -6,10 +6,11 @@
     Dim fname As String = ""
     Dim mname As String = ""
     Dim suffix As String = ""
+    Dim sex As String = ""
+    Dim birthday As String = ""
     Dim cpnum As String = ""
     Dim presentadd As String = ""
     Dim permanentadd As String = ""
-    Dim sex As String = ""
     Dim placeofbirth As String = ""
     Dim email As String = ""
     Dim fb As String = ""
@@ -27,13 +28,14 @@
         fname = firstname.Text.ToString
         mname = middlename.Text.ToString
         suffix = suffix_tb.Text.ToString
+        sex = sex_tb.Text.ToString
+        birthday = bday.Text.ToString
         cpnum = cpnumber.Text.ToString
         presentadd = prebarangay.Text.ToString + "," + premunicipality.Text.ToString + "," + preprovince.Text.ToString
         permanentadd = perbarangay.Text.ToString + "," + permunicipality.Text.ToString + "," + perprovince.Text.ToString
         placeofbirth = birthplace.Text.ToString
         email = email_tb.Text.ToString
         fb = fb_tb.Text.ToString
-        sex = sex_tb.Text.ToString
 
         Dim sql As String = ""
 
@@ -42,10 +44,11 @@
             ,FName
             ,MName
             ,Suffix
+            ,Sex
+            ,Birthday
             ,ContactNumber
             ,PresentAddress
             ,PermanentAddress
-            ,Gender
             ,PlaceOfBirth
             ,Email
             ,FBAccount
@@ -55,15 +58,21 @@ VALUES('" & stud_ID & "'
             ,'" & fname & "'
             ,'" & mname & "'
             ,'" & suffix & "'
+            ,'" & sex & "'
+            ,' " & birthday & "'
             ,'" & cpnum & "'
             ,'" & presentadd & "'
             ,'" & permanentadd & "'
-            ,'" & sex & "'
             ,'" & placeofbirth & "'
             ,'" & email & "'
             ,'" & fb & "'
             ,GETDATE())"
 
-        Call _save(sql)
+        Dim result As DialogResult = MessageBox.Show("Click ok to continue.", "Add Student", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        If result = DialogResult.OK Then
+            Call _save(sql)
+        Else
+
+        End If
     End Sub
 End Class

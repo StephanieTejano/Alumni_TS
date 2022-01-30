@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Student_Form
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,7 +17,7 @@ Partial Class Student_Form
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Student_Form))
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
@@ -40,7 +40,6 @@ Partial Class Student_Form
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.PanelControl5 = New DevExpress.XtraEditors.PanelControl()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.suffix_tb = New System.Windows.Forms.TextBox()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
@@ -94,6 +93,7 @@ Partial Class Student_Form
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.bday = New DevExpress.XtraEditors.DateEdit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.Body_PNL, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,6 +117,8 @@ Partial Class Student_Form
         Me.PanelControl2.SuspendLayout()
         CType(Me.Footer_PNL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Footer_PNL.SuspendLayout()
+        CType(Me.bday.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bday.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelControl1
@@ -326,7 +328,7 @@ Partial Class Student_Form
         '
         'PanelControl5
         '
-        Me.PanelControl5.Controls.Add(Me.DateTimePicker1)
+        Me.PanelControl5.Controls.Add(Me.bday)
         Me.PanelControl5.Controls.Add(Me.Label27)
         Me.PanelControl5.Controls.Add(Me.suffix_tb)
         Me.PanelControl5.Controls.Add(Me.TextBox16)
@@ -355,13 +357,6 @@ Partial Class Student_Form
         Me.PanelControl5.Name = "PanelControl5"
         Me.PanelControl5.Size = New System.Drawing.Size(623, 357)
         Me.PanelControl5.TabIndex = 23
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(307, 266)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(136, 23)
-        Me.DateTimePicker1.TabIndex = 38
         '
         'Label27
         '
@@ -886,13 +881,26 @@ Partial Class Student_Form
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'bday
+        '
+        Me.bday.EditValue = Nothing
+        Me.bday.Location = New System.Drawing.Point(307, 265)
+        Me.bday.Name = "bday"
+        Me.bday.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.bday.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.bday.Size = New System.Drawing.Size(136, 22)
+        Me.bday.TabIndex = 3
+        '
         'Student_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1063, 587)
         Me.Controls.Add(Me.PanelControl1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Student_Form"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Student Membership Form"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
@@ -923,6 +931,8 @@ Partial Class Student_Form
         Me.PanelControl2.PerformLayout()
         CType(Me.Footer_PNL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Footer_PNL.ResumeLayout(False)
+        CType(Me.bday.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bday.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1000,5 +1010,5 @@ Partial Class Student_Form
     Friend WithEvents PanelControl10 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents PanelControl7 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents RadioButton5 As RadioButton
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents bday As DevExpress.XtraEditors.DateEdit
 End Class

@@ -5,6 +5,9 @@ Partial Public Class Form1
         DevExpress.UserSkins.BonusSkins.Register()
         DevExpress.Skins.SkinManager.EnableFormSkins()
     End Sub
+    Public Sub New()
+        InitializeComponent()
+    End Sub
     Private Sub BarButtonItem3_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem3.ItemClick
         ControlAlumni1.BringToFront()
     End Sub
@@ -17,23 +20,23 @@ Partial Public Class Form1
         Academic_Year.ShowDialog()
     End Sub
 
-    Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs)
-        ControlMembership1.BringToFront()
+    Private Sub studentbtn(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem2.ItemClick
+        ControlStudent1.BringToFront()
     End Sub
 
-    Private Sub Studentbtn(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem2.ItemClick
-        ControlStudent1.BringToFront()
+    Private Sub Blank1_Load(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub MembershipButton_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
         ControlMembership1.BringToFront()
     End Sub
 
-    Private Sub AdduserButton_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem5.ItemClick
+    Private Sub BarButtonItem5_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem5.ItemClick
         AddUser.ShowDialog()
     End Sub
 
-    Private Sub GuardianButton_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem7.ItemClick
+    Private Sub BarButtonItem7_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem7.ItemClick
         ControlGuardian1.BringToFront()
     End Sub
 End Class
