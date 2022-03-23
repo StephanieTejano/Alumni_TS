@@ -47,6 +47,7 @@
     <Reference Include="DevExpress.Data.v17.2" />
     <Reference Include="DevExpress.Printing.v17.2.Core" />
     <Reference Include="DevExpress.Utils.v17.2" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v17.2" />
     <Reference Include="DevExpress.Sparkline.v17.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v17.2" />
@@ -54,7 +55,12 @@
     <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,154 +82,165 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Academic_Year.Designer.vb">
-      <DependentUpon>Academic_Year.vb</DependentUpon>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CONTROL\Control_Blank.Designer.vb">
+      <DependentUpon>Control_Blank.vb</DependentUpon>
     </Compile>
-    <Compile Include="Academic_Year.vb">
+    <Compile Include="CONTROL\Control_Blank.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORM\Frm_AcademicYear.Designer.vb">
+      <DependentUpon>Frm_AcademicYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Frm_AcademicYear.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddGuardian.Designer.vb">
-      <DependentUpon>AddGuardian.vb</DependentUpon>
+    <Compile Include="FORM\Frm_AddGuardian.Designer.vb">
+      <DependentUpon>Frm_AddGuardian.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddGuardian.vb">
+    <Compile Include="FORM\Frm_AddGuardian.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUser.Designer.vb">
-      <DependentUpon>AddUser.vb</DependentUpon>
+    <Compile Include="FORM\Frm_AddUser.Designer.vb">
+      <DependentUpon>Frm_AddUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddUser.vb">
+    <Compile Include="FORM\Frm_AddUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_MemberForm.Designer.vb">
-      <DependentUpon>Add_MemberForm.vb</DependentUpon>
+    <Compile Include="FORM\Frm_AddMember.Designer.vb">
+      <DependentUpon>Frm_AddMember.vb</DependentUpon>
     </Compile>
-    <Compile Include="Add_MemberForm.vb">
+    <Compile Include="FORM\Frm_AddMember.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alumni.Designer.vb">
-      <DependentUpon>Alumni.vb</DependentUpon>
+    <Compile Include="FORM\Frm_Alumni.Designer.vb">
+      <DependentUpon>Frm_Alumni.vb</DependentUpon>
     </Compile>
-    <Compile Include="Alumni.vb">
+    <Compile Include="FORM\Frm_Alumni.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="blank.Designer.vb">
-      <DependentUpon>blank.vb</DependentUpon>
-    </Compile>
-    <Compile Include="blank.vb" />
-    <Compile Include="ControlAlumni.Designer.vb">
+    <Compile Include="CONTROL\ControlAlumni.Designer.vb">
       <DependentUpon>ControlAlumni.vb</DependentUpon>
     </Compile>
-    <Compile Include="ControlAlumni.vb">
+    <Compile Include="CONTROL\ControlAlumni.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlGuardian.Designer.vb">
+    <Compile Include="CONTROL\ControlGuardian.Designer.vb">
       <DependentUpon>ControlGuardian.vb</DependentUpon>
     </Compile>
-    <Compile Include="ControlGuardian.vb">
+    <Compile Include="CONTROL\ControlGuardian.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlMembership.Designer.vb">
+    <Compile Include="CONTROL\ControlMembership.Designer.vb">
       <DependentUpon>ControlMembership.vb</DependentUpon>
     </Compile>
-    <Compile Include="ControlMembership.vb">
+    <Compile Include="CONTROL\ControlMembership.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlProfessors.Designer.vb">
+    <Compile Include="CONTROL\ControlProfessors.Designer.vb">
       <DependentUpon>ControlProfessors.vb</DependentUpon>
     </Compile>
-    <Compile Include="ControlProfessors.vb">
+    <Compile Include="CONTROL\ControlProfessors.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlStudent.Designer.vb">
+    <Compile Include="CONTROL\ControlStudent.Designer.vb">
       <DependentUpon>ControlStudent.vb</DependentUpon>
     </Compile>
-    <Compile Include="ControlStudent.vb">
+    <Compile Include="CONTROL\ControlStudent.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Frm_MAIN.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Frm_MAIN.Designer.vb">
+      <DependentUpon>Frm_MAIN.vb</DependentUpon>
     </Compile>
-    <Compile Include="Add_Member.Designer.vb">
-      <DependentUpon>Add_Member.vb</DependentUpon>
+    <Compile Include="FORM\Frm_Guardian.Designer.vb">
+      <DependentUpon>Frm_Guardian.vb</DependentUpon>
     </Compile>
-    <Compile Include="Add_Member.vb" />
-    <Compile Include="Guardian_Form.Designer.vb">
-      <DependentUpon>Guardian_Form.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Guardian_Form.vb">
+    <Compile Include="FORM\Frm_Guardian.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm1.Designer.vb">
-      <DependentUpon>LoginForm1.vb</DependentUpon>
+    <Compile Include="FORM\Frm_LogIn.Designer.vb">
+      <DependentUpon>Frm_LogIn.vb</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm1.vb">
+    <Compile Include="FORM\Frm_LogIn.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
+    <Compile Include="Frm_Server.Designer.vb">
+      <DependentUpon>Frm_Server.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Server.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_SQLConnect.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="Professors Information.Designer.vb">
-      <DependentUpon>Professors Information.vb</DependentUpon>
+    <Compile Include="FORM\Frm_Professor.Designer.vb">
+      <DependentUpon>Frm_Professor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Professors Information.vb">
+    <Compile Include="FORM\Frm_Professor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student_Form.Designer.vb">
-      <DependentUpon>Student_Form.vb</DependentUpon>
+    <Compile Include="FORM\Frm_Student.Designer.vb">
+      <DependentUpon>Frm_Student.vb</DependentUpon>
     </Compile>
-    <Compile Include="Student_Form.vb">
+    <Compile Include="FORM\Frm_Student.vb">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="Academic_Year.resx">
-      <DependentUpon>Academic_Year.vb</DependentUpon>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="CONTROL\Control_Blank.resx">
+      <DependentUpon>Control_Blank.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddGuardian.resx">
-      <DependentUpon>AddGuardian.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_AcademicYear.resx">
+      <DependentUpon>Frm_AcademicYear.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddUser.resx">
-      <DependentUpon>AddUser.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_AddGuardian.resx">
+      <DependentUpon>Frm_AddGuardian.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_MemberForm.resx">
-      <DependentUpon>Add_MemberForm.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_AddUser.resx">
+      <DependentUpon>Frm_AddUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alumni.resx">
-      <DependentUpon>Alumni.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_AddMember.resx">
+      <DependentUpon>Frm_AddMember.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="blank.resx">
-      <DependentUpon>blank.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_Alumni.resx">
+      <DependentUpon>Frm_Alumni.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlAlumni.resx">
+    <EmbeddedResource Include="CONTROL\ControlAlumni.resx">
       <DependentUpon>ControlAlumni.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlGuardian.resx">
+    <EmbeddedResource Include="CONTROL\ControlGuardian.resx">
       <DependentUpon>ControlGuardian.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlMembership.resx">
+    <EmbeddedResource Include="CONTROL\ControlMembership.resx">
       <DependentUpon>ControlMembership.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlProfessors.resx">
+    <EmbeddedResource Include="CONTROL\ControlProfessors.resx">
       <DependentUpon>ControlProfessors.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlStudent.resx">
+    <EmbeddedResource Include="CONTROL\ControlStudent.resx">
       <DependentUpon>ControlStudent.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_MAIN.resx">
+      <DependentUpon>Frm_MAIN.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_Member.resx">
-      <DependentUpon>Add_Member.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_Guardian.resx">
+      <DependentUpon>Frm_Guardian.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guardian_Form.resx">
-      <DependentUpon>Guardian_Form.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_LogIn.resx">
+      <DependentUpon>Frm_LogIn.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm1.resx">
-      <DependentUpon>LoginForm1.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_Server.resx">
+      <DependentUpon>Frm_Server.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -236,11 +253,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Professors Information.resx">
-      <DependentUpon>Professors Information.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_Professor.resx">
+      <DependentUpon>Frm_Professor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student_Form.resx">
-      <DependentUpon>Student_Form.vb</DependentUpon>
+    <EmbeddedResource Include="FORM\Frm_Student.resx">
+      <DependentUpon>Frm_Student.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -258,6 +278,7 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
